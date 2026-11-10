@@ -6,10 +6,10 @@
   <title>CYBER-GUARD // Quantum Threat Intelligence & AI Prompt Engine</title>
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="shortcut icon" href="assets/favicon.svg" />
-  
+
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
+
   <!-- Google Fonts & Lucide Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,7 +72,7 @@
     /* High-Tech Cyber Aesthetics & Grid */
     body {
       background-color: #030712;
-      background-image: 
+      background-image:
         radial-gradient(circle at 50% 0%, rgba(0, 242, 254, 0.12) 0%, transparent 60%),
         radial-gradient(circle at 90% 80%, rgba(168, 85, 247, 0.08) 0%, transparent 50%),
         linear-gradient(to right, rgba(30, 41, 59, 0.25) 1px, transparent 1px),
@@ -189,14 +189,14 @@
   <!-- ==================== TOP NAVIGATION HEADER ==================== -->
   <header class="no-print border-b border-slate-800/80 bg-slate-950/85 backdrop-blur-md sticky top-0 z-40">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-      
+
       <!-- Brand Logo & HRLZ Identity -->
       <div class="flex items-center gap-3">
         <!-- HRLZ Custom Logo -->
         <div class="relative h-14 w-14 flex items-center justify-center flex-shrink-0">
-          <img 
-            src="assets/hrlz-logo.png" 
-            alt="HRLZ Logo" 
+          <img
+            src="assets/hrlz-logo.svg"
+            alt="HRLZ Logo"
             class="h-14 w-auto object-contain"
             style="filter: drop-shadow(0 0 10px rgba(0,242,254,0.55)) drop-shadow(0 0 22px rgba(16,185,129,0.3));"
           />
@@ -216,14 +216,14 @@
 
       <!-- Quick Telemetry Badges & Audio / History Toggles -->
       <div class="flex items-center gap-3">
-        
+
         <div class="hidden lg:flex items-center gap-4 px-3 py-1.5 rounded-lg border border-slate-800 bg-slate-900/60 font-mono text-xs">
           <span class="flex items-center gap-1.5 text-emerald-400">
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
             DEFENSE: ACTIVE
           </span>
           <span class="text-slate-600">|</span>
-          <span class="text-slate-400">ENGINES: <span class="text-cyan-400 font-bold">72/72</span></span>
+          <span class="text-slate-400">ENGINES: <span class="text-cyan-400 font-bold">LOCAL</span></span>
           <span class="text-slate-600">|</span>
           <span class="text-slate-400">RADAR: <span class="text-emerald-400 font-bold">ONLINE</span></span>
         </div>
@@ -253,7 +253,7 @@
     <!-- HERO SECTION WITH CYBERSECURITY HERO IMAGE & RADAR HUD        -->
     <!-- ============================================================== -->
     <section class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-      
+
       <!-- Left Column: Headline & Intro -->
       <div class="lg:col-span-7 space-y-4 text-center lg:text-left">
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-300 text-xs font-mono">
@@ -291,16 +291,15 @@
       <!-- Right Column: Visual Cyber Security Holographic Artwork -->
       <div class="lg:col-span-5 relative">
         <div class="relative rounded-2xl overflow-hidden border border-cyan-500/40 shadow-2xl shadow-cyan-500/20 group glass-cyber-glow">
-          
+
           <!-- Cyber Hero Image -->
           <div class="relative aspect-video w-full overflow-hidden bg-slate-950">
-            <img 
-              src="assets/cyber-hero.png" 
+            <img
+              src="assets/cyber-hero.svg"
               alt="Cyber Security Defense Center & Holographic Shield"
               class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 opacity-90"
-              onerror="this.onerror=null; this.src='assets/cyber-hero.jpg';"
             />
-            
+
             <!-- Scanline & Ambient Overlay -->
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
             <div class="scanline-effect absolute inset-0 pointer-events-none"></div>
@@ -326,7 +325,7 @@
               <i data-lucide="radio" class="w-3.5 h-3.5 text-cyan-400 animate-pulse"></i>
               <span>Live Threat Vector Grid</span>
             </div>
-            <span class="text-cyan-400 font-bold">100% SECURE SANDBOX</span>
+            <span class="text-cyan-400 font-bold">PASSIVE URL ANALYSIS</span>
           </div>
 
         </div>
@@ -338,23 +337,23 @@
     <!-- MAIN SCANNER OMNI-BAR CARD                                    -->
     <!-- ============================================================== -->
     <section class="glass-cyber-glow rounded-2xl p-4 sm:p-6 max-w-5xl mx-auto space-y-4 relative">
-      
+
       <!-- Input Form -->
       <form id="scanForm" onsubmit="event.preventDefault(); startAnalysis();" class="flex flex-col sm:flex-row gap-3">
         <div class="relative flex-1">
           <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-500" id="inputTypeIconContainer">
             <i data-lucide="link" class="w-5 h-5 text-cyan-400" id="inputTypeIcon"></i>
           </div>
-          
-          <input 
-            type="text" 
-            id="targetInput" 
-            placeholder="Paste URL, Domain (e.g. paypaI-login.top) or GitHub link..." 
+
+          <input
+            type="text"
+            id="targetInput"
+            placeholder="Paste URL, Domain (e.g. paypaI-login.top) or GitHub link..."
             class="w-full pl-11 pr-32 py-3.5 bg-slate-950/90 border border-slate-700/80 rounded-xl text-slate-100 placeholder-slate-500 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 font-mono text-sm transition"
             autocomplete="off"
             value="http://paypaI-security-update-verify-login.xyz"
           />
-          
+
           <!-- Detected Type Indicator Badge -->
           <div class="absolute inset-y-0 right-3 flex items-center">
             <span id="detectedTypeBadge" class="px-2.5 py-1 text-[11px] font-mono rounded-md border border-cyan-500/40 bg-cyan-500/10 text-cyan-400">
@@ -364,8 +363,8 @@
         </div>
 
         <!-- Analyze Button -->
-        <button 
-          type="submit" 
+        <button
+          type="submit"
           id="scanSubmitBtn"
           class="px-7 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 via-teal-400 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-slate-950 font-bold text-sm tracking-wide shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 transition transform active:scale-95 flex items-center justify-center gap-2 font-mono shrink-0"
         >
@@ -430,10 +429,10 @@
     <!-- RESULTS SECTION DASHBOARD                                      -->
     <!-- ============================================================== -->
     <div id="resultsDashboard" class="hidden space-y-8">
-      
+
       <!-- Top Overview Row: Safety Score + Metrics Grid -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        
+
         <!-- Score & Verdict Gauge Box (5 cols) -->
         <div class="lg:col-span-5 glass-cyber rounded-2xl p-6 flex flex-col justify-between relative overflow-hidden" id="verdictBox">
           <div class="flex justify-between items-start">
@@ -479,7 +478,7 @@
 
           <!-- 4 Grid Metric Cards -->
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            
+
             <!-- Metric 1: SSL & HTTPS -->
             <div class="p-4 rounded-xl bg-slate-950/70 border border-slate-800/80 space-y-2">
               <div class="flex items-center justify-between text-xs">
@@ -544,31 +543,31 @@
       <!-- VIEW SWITCHER TABS: AI PROMPT VS SPECIALIST DEEP REPORTS       -->
       <!-- ============================================================== -->
       <div class="flex items-center space-x-2 border-b border-slate-800 pb-3 overflow-x-auto">
-        <button id="viewTabPrompt" onclick="switchResultView('prompt')" 
+        <button id="viewTabPrompt" onclick="switchResultView('prompt')"
                 class="px-4 py-2 rounded-xl text-xs font-mono font-bold transition flex items-center gap-2 border bg-cyan-500/20 text-cyan-400 border-cyan-500/50">
           <i data-lucide="bot" class="w-4 h-4"></i>
           <span>Automated AI Prompt Generator</span>
         </button>
 
-        <button id="viewTabWebsite" onclick="switchResultView('website')" 
+        <button id="viewTabWebsite" onclick="switchResultView('website')"
                 class="px-4 py-2 rounded-xl text-xs font-mono font-bold transition flex items-center gap-2 border border-slate-800 bg-slate-900/60 text-slate-400 hover:text-slate-200">
           <i data-lucide="layout" class="w-4 h-4"></i>
           <span>Website Design & Wireframe Scanner</span>
         </button>
 
-        <button id="viewTabSpecialist" onclick="switchResultView('specialist')" 
+        <button id="viewTabSpecialist" onclick="switchResultView('specialist')"
                 class="px-4 py-2 rounded-xl text-xs font-mono font-bold transition flex items-center gap-2 border border-slate-800 bg-slate-900/60 text-slate-400 hover:text-slate-200">
           <i data-lucide="file-text" class="w-4 h-4"></i>
           <span id="specialistTabTitle">Specialist Intelligence Report</span>
         </button>
 
-        <button id="viewTabHomoglyph" onclick="switchResultView('homoglyph')" 
+        <button id="viewTabHomoglyph" onclick="switchResultView('homoglyph')"
                 class="px-4 py-2 rounded-xl text-xs font-mono font-bold transition flex items-center gap-2 border border-slate-800 bg-slate-900/60 text-slate-400 hover:text-slate-200">
           <i data-lucide="binary" class="w-4 h-4"></i>
           <span>Homoglyph & Punycode Matrix</span>
         </button>
 
-        <button id="viewTabSandbox" onclick="switchResultView('sandbox')" 
+        <button id="viewTabSandbox" onclick="switchResultView('sandbox')"
                 class="px-4 py-2 rounded-xl text-xs font-mono font-bold transition flex items-center gap-2 border border-slate-800 bg-slate-900/60 text-slate-400 hover:text-slate-200">
           <i data-lucide="terminal" class="w-4 h-4"></i>
           <span>Malicious Script Sandbox</span>
@@ -577,7 +576,7 @@
 
       <!-- VIEW 1: AI PROMPT GENERATOR SECTION -->
       <div id="resultViewPrompt" class="glass-cyber-glow rounded-2xl p-6 space-y-6">
-        
+
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800 pb-4">
           <div>
             <div class="flex items-center gap-2">
@@ -590,9 +589,9 @@
           <!-- Scenario Selector Dropdown -->
           <div class="flex items-center gap-2">
             <label for="promptScenario" class="text-xs font-mono text-slate-400 whitespace-nowrap">Audit Persona:</label>
-            <select 
-              id="promptScenario" 
-              onchange="updateGeneratedPrompt()" 
+            <select
+              id="promptScenario"
+              onchange="updateGeneratedPrompt()"
               class="bg-slate-950 border border-slate-700 text-cyan-300 text-xs font-mono rounded-xl px-3 py-2 focus:outline-none focus:border-cyan-500"
             >
               <option value="general">🛡️ General Threat & Phishing Audit</option>
@@ -609,8 +608,8 @@
             <span class="flex items-center gap-1.5">
               <span class="w-2 h-2 rounded-full bg-cyan-400"></span> Prompt Template (Auto-filled with live scan parameters)
             </span>
-            <button 
-              onclick="copyPromptToClipboard()" 
+            <button
+              onclick="copyPromptToClipboard()"
               id="copyPromptBtn"
               class="px-3.5 py-1.5 rounded-lg bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-300 border border-cyan-500/40 hover:border-cyan-400 transition flex items-center gap-1.5 text-xs font-mono font-bold"
             >
@@ -620,9 +619,9 @@
 
           <!-- Dynamic Text Box -->
           <div class="relative">
-            <textarea 
-              id="generatedPromptBox" 
-              rows="11" 
+            <textarea
+              id="generatedPromptBox"
+              rows="11"
               readonly
               class="w-full bg-slate-950/90 border border-slate-800 rounded-xl p-4 font-mono text-xs text-slate-300 focus:outline-none focus:border-cyan-500 leading-relaxed scanline-effect shadow-inner"
             ></textarea>
@@ -633,7 +632,7 @@
 
       <!-- VIEW: WEBSITE DESIGN & LIVE WIREFRAME SCANNER -->
       <div id="resultViewWebsite" class="hidden glass-cyber rounded-2xl p-6 space-y-6">
-        
+
         <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-800 pb-4 gap-3">
           <div>
             <h2 class="text-lg font-bold text-cyan-300 font-mono flex items-center gap-2">
@@ -650,10 +649,10 @@
 
         <!-- Wireframe Browser Sandbox Container with Laser Scan Beam -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-          
+
           <!-- Simulated Browser & Wireframe Canvas (7 cols) -->
           <div class="lg:col-span-7 bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden shadow-2xl relative">
-            
+
             <!-- Browser Top Bar -->
             <div class="bg-slate-900/90 border-b border-slate-800 px-4 py-2.5 flex items-center justify-between text-xs font-mono">
               <div class="flex items-center gap-2">
@@ -661,7 +660,7 @@
                 <span class="w-2.5 h-2.5 rounded-full bg-amber-500/80"></span>
                 <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></span>
               </div>
-              
+
               <!-- Address Bar -->
               <div class="flex-1 max-w-md mx-3 px-3 py-1 rounded-lg bg-slate-950 border border-slate-800 flex items-center justify-between text-[11px] text-slate-300">
                 <span class="flex items-center gap-1.5 truncate">
@@ -678,12 +677,12 @@
 
             <!-- Wireframe Canvas Content Area with Laser Scanline -->
             <div class="p-6 space-y-4 relative min-h-[380px] bg-slate-950/90 scanline-effect overflow-hidden" id="wireframeCanvasContainer">
-              
+
               <!-- Real-time Laser Scanline Beam -->
               <div class="absolute left-0 right-0 h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent shadow-[0_0_15px_#00f2fe] pointer-events-none animate-laser z-30"></div>
 
               <!-- Hotspot 1: Header / Navbar Wireframe -->
-              <div id="hotspot-wire-nav" onclick="selectWireframeHotspot(0)" 
+              <div id="hotspot-wire-nav" onclick="selectWireframeHotspot(0)"
                    class="cursor-pointer p-3.5 rounded-xl border border-slate-800 hover:border-cyan-500/60 bg-slate-900/60 transition group relative">
                 <div class="flex items-center justify-between">
                   <div class="flex items-center gap-2">
@@ -696,7 +695,7 @@
               </div>
 
               <!-- Hotspot 2: Deceptive Urgency Banner (Visible in phish, normal in safe) -->
-              <div id="hotspot-wire-banner" onclick="selectWireframeHotspot(1)" 
+              <div id="hotspot-wire-banner" onclick="selectWireframeHotspot(1)"
                    class="cursor-pointer p-3.5 rounded-xl border border-slate-800 hover:border-amber-500/60 bg-slate-900/60 transition group relative">
                 <div class="flex items-center justify-between">
                   <div class="flex items-center gap-2">
@@ -709,7 +708,7 @@
               </div>
 
               <!-- Hotspot 3: Form Element & Submit Endpoint -->
-              <div id="hotspot-wire-form" onclick="selectWireframeHotspot(2)" 
+              <div id="hotspot-wire-form" onclick="selectWireframeHotspot(2)"
                    class="cursor-pointer p-4 rounded-xl border border-slate-800 hover:border-rose-500/60 bg-slate-900/80 transition group relative space-y-2">
                 <div class="flex items-center justify-between">
                   <div class="flex items-center gap-2">
@@ -726,7 +725,7 @@
               </div>
 
               <!-- Hotspot 4: Third-Party Scripts & Subresource Integrity -->
-              <div id="hotspot-wire-scripts" onclick="selectWireframeHotspot(3)" 
+              <div id="hotspot-wire-scripts" onclick="selectWireframeHotspot(3)"
                    class="cursor-pointer p-3.5 rounded-xl border border-slate-800 hover:border-purple-500/60 bg-slate-900/60 transition group relative">
                 <div class="flex items-center justify-between">
                   <div class="flex items-center gap-2">
@@ -749,7 +748,7 @@
 
           <!-- Hotspot Active Inspector Details (5 cols) -->
           <div class="lg:col-span-5 space-y-4">
-            
+
             <div class="p-5 rounded-2xl bg-slate-950 border border-cyan-500/30 space-y-3 relative overflow-hidden shadow-xl" id="hotspotDetailCard">
               <div class="flex items-center justify-between border-b border-slate-800 pb-2">
                 <span class="text-[11px] font-mono text-cyan-400 font-bold uppercase tracking-wider">[ HOTSPOT INSPECTION TELEMETRY ]</span>
@@ -884,7 +883,7 @@
         <div class="space-y-3">
           <textarea id="sandboxCodeInput" rows="6" placeholder="Paste script or config here... e.g. class PostInstall(install): exec(base64.b64decode('...'))"
                     class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 font-mono text-xs text-slate-300 focus:outline-none focus:border-cyan-500"></textarea>
-          
+
           <button onclick="runSandboxScan()" class="px-5 py-2.5 rounded-xl bg-cyan-500 text-slate-950 font-bold font-mono text-xs hover:bg-cyan-400 transition flex items-center gap-2">
             <i data-lucide="search" class="w-3.5 h-3.5"></i> Scan Code Snippet
           </button>
