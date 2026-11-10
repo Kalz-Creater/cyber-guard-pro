@@ -236,7 +236,7 @@ async function startAnalysis() {
   ];
 
   for (const s of stages) {
-    await new Promise(r => setTimeout(r, 260 + Math.random() * 200));
+    await new Promise(r => setTimeout(r, 70 + Math.random() * 40));
     scanProgressBar.style.width = `${s.pct}%`;
     scanProgressPercent.innerText = `${s.pct}%`;
     currentScanStageText.innerText = s.msg;
@@ -265,7 +265,7 @@ async function startAnalysis() {
   setTimeout(() => {
     scanProgressSection.classList.add('hidden');
     renderResultsDashboard(currentScanData);
-  }, 350);
+  }, 100);
 }
 
 // --- Target Data Evaluation Engine ---
